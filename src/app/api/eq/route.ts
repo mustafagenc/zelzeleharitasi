@@ -1,4 +1,4 @@
-import TEarthquake from '@/app/models/earthquake';
+import TEarthquake from '@/models/earthquake';
 import { load } from 'cheerio';
 import request from 'request';
 
