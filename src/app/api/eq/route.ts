@@ -34,8 +34,6 @@ export async function GET() {
 						const mm = date.getMonth();
 						const dd = date.getDate();
 
-						console.log('Time string:', date);
-
 						if (eqInfo[1]) {
 							const [hours, minutes, seconds] =
 								eqInfo[1].split(':');
@@ -66,7 +64,7 @@ export async function GET() {
 							);
 							earthquakes.push(earthquake);
 						} else {
-							console.error('Time string is undefined');
+							console.error('');
 						}
 					});
 					resolve(earthquakes);

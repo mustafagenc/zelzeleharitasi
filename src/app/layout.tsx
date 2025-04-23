@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-	title: 'Deprem Haritası',
+	title: "Türkiye'deki Son Depremler",
 	description: 'Türkiye Deprem Haritası',
 };
 
