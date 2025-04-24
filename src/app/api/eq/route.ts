@@ -62,6 +62,18 @@ export async function GET() {
 								location,
 								city
 							);
+
+							if (magnitude >= 2 && magnitude < 4) {
+								earthquake.priority = 'normal';
+								earthquake.zIndexOffset = 10;
+							} else if (magnitude >= 4 && magnitude < 6) {
+								earthquake.priority = 'high';
+								earthquake.zIndexOffset = 100;
+							} else if (magnitude >= 6) {
+								earthquake.priority = 'critical';
+								earthquake.zIndexOffset = 1000;
+							}
+
 							earthquakes.push(earthquake);
 						} else {
 							console.error('');
