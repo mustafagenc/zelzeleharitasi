@@ -1,5 +1,6 @@
 # Zelzele Haritası - Türkiye'deki Son Depremler
-Türkiye'deki son 500 depremi gösteren harita uygulaması.
+
+Bu proje, Kandilli Rasathanesi'nden alınan güncel deprem verilerini kullanarak Türkiye'deki son depremleri canlı bir harita üzerinde görselleştiren bir web uygulamasıdır.
 
 [![Support Palestine](https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/banner-support.svg)](https://github.com/Safouene1/support-palestine-banner/blob/master/Markdown-pages/Support.md)
 
@@ -50,6 +51,14 @@ Tarayıcında [http://localhost:3000](http://localhost:3000) adresini açarak pr
 - `start`: Uygulamayı üretim (production) modunda `localhost:3000` adresinde başlatır (önce derlemeyi çalıştırdığınızdan emin olun).
 - `lint`: `/src` dizininde eslint çalıştırır (kodun kurallara uygunluğunu kontrol eder).
 - `prettier`: `/src` dizininde prettier çalıştırır (kodun biçimlendirmesini düzenler).
+
+## 🤝 Katkılar
+
+Bu proje açık kaynaklıdır ve katkılarınız memnuniyetle karşılanır. Hata bildirimleri vePull Request'ler aracılığıyla projeye destek olabilirsiniz.
+
+## 📄 Lisans
+
+[MIT](LICENSE) altında lisanslanmıştır.
 
 ## 💬 İletişim
 
