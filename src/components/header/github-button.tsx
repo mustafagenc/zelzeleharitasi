@@ -12,10 +12,10 @@ export const GithubButton = () => {
 			<Button
 				className='cursor-pointer rounded-full'
 				variant='outline'
-				size='icon'
 				onClick={githubUrl}
 			>
 				<AiFillGithub size={16} aria-hidden='true' />
+				<span>GitHub</span>
 			</Button>
 		</div>
 	);

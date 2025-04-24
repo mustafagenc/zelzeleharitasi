@@ -5,7 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 
 const DynamicMap = dynamic(
-	() => import('@/components/map').then((mod) => mod.MapContent),
+	() => import('@/components/map/map').then((mod) => mod.MapContent),
 	{
 		ssr: false,
 	}

@@ -8,7 +8,7 @@ import { ThemeSwitcher } from './theme-switcher';
 export const Navbar = () => {
 	return (
 		<>
-			<nav className='relative mx-auto flex w-full max-w-7xl items-center justify-between'>
+			<nav className='relative mx-auto px-4 flex w-full items-center justify-between'>
 				<div>
 					<Link
 						href={'/'}
