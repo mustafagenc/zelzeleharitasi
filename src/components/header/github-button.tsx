@@ -15,7 +15,7 @@ export const GithubButton = () => {
 				onClick={githubUrl}
 			>
 				<AiFillGithub size={16} aria-hidden='true' />
-				<span>GitHub</span>
+				<span className='hidden lg:block'>GitHub</span>
 			</Button>
 		</div>
 	);

@@ -25,11 +25,11 @@ export const Header = () => {
 	return (
 		<>
 			<header
-				className={`sticky top-0 z-20 flex w-full flex-col items-center py-4 ${
+				className={`sticky top-0 z-20 flex w-full flex-col items-center py-2 ${
 					isTop
 						? 'border-none'
 						: 'border-b border-gray-200 dark:border-gray-800'
-				} bg-opacity-30 dark:bg-opacity-30 bg-background px-4 backdrop-blur-lg backdrop-saturate-150 backdrop-filter lg:px-0`}
+				} bg-opacity-30 dark:bg-opacity-30 bg-background px-1 backdrop-blur-lg backdrop-saturate-150 backdrop-filter lg:px-0`}
 			>
 				<Navbar />
 			</header>
