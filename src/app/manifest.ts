@@ -3,12 +3,13 @@ import type { MetadataRoute } from 'next';
 export default async function manifest(): Promise<MetadataRoute.Manifest> {
 	return {
 		name: 'Deprem Haritası',
-		short_name: 'D.H.',
-		description: 'Türkiye deprem haritası',
+		short_name: 'Deprem Haritası',
+		description: "Türkiye'deki son 500 depremi gösteren harita uygulaması.",
 		start_url: '/',
 		display: 'standalone',
 		background_color: '#FFFFFF',
-		theme_color: '#2863ec',
+		theme_color: '#7FD0EC',
+		orientation: 'portrait',
 		icons: [
 			{
 				src: '/favicon/android-chrome-192x192.png',
