@@ -19,12 +19,11 @@ export const MapContent = () => {
 			shadowUrl: '/map/marker-shadow.png',
 		});
 
-		fetch('/api/eq')
+		fetch('/api/eq', { cache: 'no-store', next: { revalidate: 3600 } })
 			.then((res) => res.json())
 			.then((data) => {
 				setData(data);
 				setLoading(false);
-				console.log(data);
 			});
 	}, []);
 
@@ -32,13 +31,13 @@ export const MapContent = () => {
 
 	if (isLoading) return <p>Loading...</p>;
 	if (!data) return <p>No data available</p>;
-	
+
 	// const bounds: L.LatLngBounds = L.latLngBounds(
-		// 	data.map((item) => [item.latitude, item.longitude]) as [
-			// 		number,
-			// 		number
-			// 	][]
-			// );
+	// 	data.map((item) => [item.latitude, item.longitude]) as [
+	// 		number,
+	// 		number
+	// 	][]
+	// );
 
 	const bounds: L.LatLngBounds = L.latLngBounds(
 		userLocation.location
@@ -47,7 +46,7 @@ export const MapContent = () => {
 	);
 
 	return (
-		<>
+		<div className='absolute top-0 left-0 z-0 h-screen w-full'>
 			<MapContainer
 				center={bounds.getCenter()}
 				zoom={10}
@@ -70,11 +69,21 @@ export const MapContent = () => {
 						zIndexOffset={item.zIndexOffset}
 					>
 						<Popup>
-							{item.magnitude} {item.zIndexOffset}
+							Büyüklük: {item.magnitude}
+							<br />
+							Derinlik: {item.depth} km
+							<br />
+							Tarih: {new Date(item.date).toLocaleString()}
+							<br />
+							Koordinatlar: {item.latitude}, {item.longitude}
+							<br />
+							Şehir: {item.city}
+							<br />
+							Lokasyon: {item.location}
 						</Popup>
 					</Marker>
 				))}
 			</MapContainer>
-		</>
+		</div>
 	);
 };
