@@ -10,7 +10,7 @@ Bu proje, Kandilli Rasathanesi'nden alınan güncel deprem verilerini kullanarak
 
 ## 💻 Mockup
 
-![Mockup](https://raw.githubusercontent.com/mustafagenc/zelzeleharitasi/refs/heads/main/public/all-devices-white-mockup.png)
+![Mockup](https://raw.githubusercontent.com/mustafagenc/zelzeleharitasi/refs/heads/main/public/mockup.png)
 
 ## 🪄 Kullandığım Teknolojiler
 
