@@ -1,7 +1,7 @@
 "use client";
 
+import { Coffee } from "lucide-react";
 import Link from "next/link";
-import { PiBowlSteamFill } from "react-icons/pi";
 
 export const Footer = () => {
   return (
@@ -47,7 +47,7 @@ export const Footer = () => {
             target="_blank"
             className="ml-2 flex h-7 w-40 flex-row items-center space-x-1.5 rounded-sm bg-blue-500 px-2 py-1 text-white shadow-sm transition duration-200 ease-in-out hover:opacity-90 dark:bg-blue-600"
           >
-            <PiBowlSteamFill className="h-5 w-5" />
+            <Coffee  className="h-5 w-5"/>
             <span className="text-shadow text-xs">Bana bir çay ısmarla</span>
           </Link>
         </div>

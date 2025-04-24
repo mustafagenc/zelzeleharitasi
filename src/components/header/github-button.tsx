@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { AiFillGithub } from 'react-icons/ai';
+import { GitHubIcon } from './github-icon';
 
 export const GithubButton = () => {
 	const githubUrl = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -14,7 +14,7 @@ export const GithubButton = () => {
 				variant='outline'
 				onClick={githubUrl}
 			>
-				<AiFillGithub size={16} aria-hidden='true' />
+				<GitHubIcon aria-hidden='true' />
 				<span className='hidden lg:block'>GitHub</span>
 			</Button>
 		</div>

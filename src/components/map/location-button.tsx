@@ -3,7 +3,7 @@ import { useSnackbar } from "notistack";
 import { FC } from "react";
 import { useMap } from "react-leaflet";
 import { Button } from "../ui/button";
-import { MdMyLocation } from "react-icons/md";
+import { LocateFixed } from "lucide-react";
 
 
 const LocationButton: FC = () => {
@@ -31,7 +31,7 @@ const LocationButton: FC = () => {
 
   return (
     <Button variant="outline" size="icon" onClick={handleClickToCenter} className="cursor-pointer rounded-full">
-      <MdMyLocation />
+      <LocateFixed />
     </Button>
   );
 };
