@@ -1,5 +1,5 @@
 # Zelzele Haritası - Türkiye'deki Son Depremler
-## Türkiye'deki son 500 depremi gösteren harita uygulaması.
+Türkiye'deki son 500 depremi gösteren harita uygulaması.
 
 [![Support Palestine](https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/banner-support.svg)](https://github.com/Safouene1/support-palestine-banner/blob/master/Markdown-pages/Support.md)
 
