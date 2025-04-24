@@ -14,11 +14,6 @@ export const MapContent = () => {
 	const [isLoading, setLoading] = useState(true);
 
 	useEffect(() => {
-		L.Icon.Default.mergeOptions({
-			iconUrl: '/map/marker-icon.png',
-			shadowUrl: '/map/marker-shadow.png',
-		});
-
 		fetch('/api/eq', { cache: 'no-store', next: { revalidate: 3600 } })
 			.then((res) => res.json())
 			.then((data) => {
@@ -32,24 +27,17 @@ export const MapContent = () => {
 	if (isLoading) return <p>Loading...</p>;
 	if (!data) return <p>No data available</p>;
 
-	// const bounds: L.LatLngBounds = L.latLngBounds(
-	// 	data.map((item) => [item.latitude, item.longitude]) as [
-	// 		number,
-	// 		number
-	// 	][]
-	// );
-
 	const bounds: L.LatLngBounds = L.latLngBounds(
 		userLocation.location
 			? [[userLocation.location[0], userLocation.location[1]]]
-			: [[0, 0]]
+			: [[40.9086321, 28.7481334]]
 	);
 
 	return (
 		<div className='absolute top-0 left-0 z-0 h-screen w-full'>
 			<MapContainer
 				center={bounds.getCenter()}
-				zoom={10}
+				zoom={9}
 				scrollWheelZoom={true}
 				className='h-[calc(100vh)] w-full'
 			>

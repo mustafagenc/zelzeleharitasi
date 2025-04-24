@@ -6,19 +6,24 @@ import { PiBowlSteamFill } from 'react-icons/pi';
 export const Footer = () => {
 	return (
 		<>
-			<footer className='z-10 fixed bottom-10 right-10 left-10 bg-white flex flex-col lg:flex-row items-center justify-center dark:bg-black p-4 text-shadow-2xs text-xs rounded-md select-none'>
-				<div>
-					Bu uygulamada yayımlanan her türlü bilgi, veri ve haritalara
-					ilişkin telif hakları münhasıran Boğaziçi Üniversitesi
-					Rektörlüğü’ne ait olup, Boğaziçi Üniversitesi Kandilli
-					Rasathanesi ve Deprem Araştırma Enstitüsü Bölgesel
-					Deprem-Tsunami İzleme Ve Değerlendirme Merkezi kaynak
-					gösterilerek kullanılabilir. Söz konusu bilgi, veri ve
-					haritalar Boğaziçi Üniversitesi Rektörlüğü’nün yazılı izni
-					ve onayı olmadan herhangi bir şekilde ticari amaçlı
-					kullanılamaz.
+			<footer className='z-10 fixed bottom-10 right-10 left-10 bg-white flex flex-col lg:flex-row items-center justify-center dark:bg-black p-4 text-shadow-2xs rounded-md select-none'>
+				<div className='text-xs text-gray-500 dark:text-gray-400 grow text-center lg:text-left'>
+					Bu uygulama{' '}
+					<a
+						href='http://www.koeri.boun.edu.tr/scripts/lst8.asp'
+						target='_blank'
+						className='text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300'
+					>
+						Boğaziçi Üniversitesi Kandilli Rasathanesi ve Deprem
+						Araştırma Enstitüsü
+					</a>{' '}
+					(KRDAE) tarafından sağlanan verileri kullanmaktadır. Tüm
+					deprem verilerinin telif hakları Boğaziçi Üniversitesi
+					Rektörlüğü&apos;ne aittir. <br />
+					Bu veri bilimsel ve bilgilendirme amaçlı kullanılabilir
+					ancak ticari amaçla kullanılamaz.
 				</div>
-				<div className='flex items-center justify-center lg:mt-0 mt-4'>
+				<div className='flex items-center justify-center lg:mt-0 mt-4 wd-82'>
 					<Link
 						href='https://x.com/search?q=IStandWithPalastine&f=live'
 						target='_blank'

@@ -2,6 +2,7 @@
 
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/navigation';
+import { useEffect } from 'react';
 
 const DynamicMap = dynamic(
 	() => import('@/components/map').then((mod) => mod.MapContent),
@@ -13,9 +14,11 @@ const DynamicMap = dynamic(
 export default function Page() {
 	const router = useRouter();
 
-	setTimeout(() => {
-		router.refresh();
-	}, 60000);
+	useEffect(() => {
+		setTimeout(() => {
+			router.refresh();
+		}, 60000);
+	}, [router]);
 
 	return (
 		<>

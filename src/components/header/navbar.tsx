@@ -14,18 +14,16 @@ export const Navbar = () => {
 						href={'/'}
 						className='grid grid-flow-col content-stretch items-center gap-4'
 					>
-						<button className='group relative inline-flex cursor-pointer items-center justify-center overflow-hidden rounded-full bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white focus:ring-4 focus:ring-green-200 focus:outline-none dark:text-white dark:focus:ring-green-800'>
-							<span className='relative h-12 w-12 rounded-md p-2'>
-								<Image
-									className='h-8 w-8 fill-white'
-									src='/earthquake-svgrepo-com.svg'
-									alt="Türkiye'deki Son Depremler"
-									width={512}
-									height={512}
-								/>
-							</span>
-						</button>
-						<div className='font-popins text-2xl font-semibold text-shadow-lg dark:shadow-blue-900'>
+						<div>
+							<Image
+								className='h-14 w-14'
+								src='/earthquake-svgrepo-com.svg'
+								alt="Türkiye'deki Son Depremler"
+								width={512}
+								height={512}
+							/>
+						</div>
+						<div className='font-popins text-2xl font-semibold text-shadow-xs dark:shadow-blue-900'>
 							<span className='hidden lg:block'>
 								Türkiye&apos;deki Son Depremler
 							</span>
