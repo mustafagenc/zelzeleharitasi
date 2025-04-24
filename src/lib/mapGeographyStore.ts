@@ -14,6 +14,6 @@ export const useMapGeographyStore = create<State>((set) => ({
   location: null,
   actions: {
     setZoom: (zoom) => set(() => ({ zoom })),
-    setLocation: (location) => set(() => ({ location }))
-  }
+    setLocation: (location) => set(() => ({ location })),
+  },
 }));

@@ -16,7 +16,7 @@ export const useMapEvents = () => {
     },
     zoomend: () => {
       debouncedZoom();
-    }
+    },
   });
 
   return map;

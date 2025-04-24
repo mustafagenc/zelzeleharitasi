@@ -1,5 +1,5 @@
-import { ClassValue, clsx } from 'clsx';
-import { twMerge } from 'tailwind-merge';
+import { ClassValue, clsx } from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs));
@@ -16,7 +16,7 @@ function removeMDXAcorns({ markdown }: { markdown: string }): string {
   const acornLineRegex = /^(.*%\[.*?\].*)$/gm;
   const acornBlockRegex = /{%.*?%}/g;
 
-  markdown = markdown.replace(acornLineRegex, '').replace(acornBlockRegex, '');
+  markdown = markdown.replace(acornLineRegex, "").replace(acornBlockRegex, "");
 
   return markdown;
 }
@@ -25,7 +25,7 @@ function removeAlignProperty({ markdown }: { markdown: string }): string {
   const regex = /(!\[.*?\]\(.*?\s+align=".*?"\))/g;
 
   return markdown.replace(regex, (match) => {
-    return match.replace(/\s+align=".*?"/, '');
+    return match.replace(/\s+align=".*?"/, "");
   });
 }
 

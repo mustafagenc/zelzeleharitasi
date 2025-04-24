@@ -30,10 +30,10 @@ export const Navbar = () => {
               <span className="hidden lg:block text-xs">
                 Türkiye&apos;deki son 500 depremi gösteren harita uygulaması.
               </span>
-              <span className="lg:hidden text-2xl font-semibold">Depremler</span>
-			  <span className="lg:hidden text-xs">
-                Son 500 deprem.
+              <span className="lg:hidden text-2xl font-semibold">
+                Depremler
               </span>
+              <span className="lg:hidden text-xs">Son 500 deprem.</span>
             </div>
           </Link>
         </div>

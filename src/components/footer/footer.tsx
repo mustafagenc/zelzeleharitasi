@@ -8,7 +8,7 @@ export const Footer = () => {
     <>
       <footer className="z-10 fixed bottom-2 right-2 left-2 lg:bottom-10 lg:right-10 lg:left-10 bg-white flex flex-col lg:flex-row dark:bg-black p-4 text-shadow-2xs rounded-md select-none">
         <div className="text-xs text-gray-500 dark:text-gray-400 grow text-left lg:block hidden">
-          Bu uygulama 
+          Bu uygulama
           <a
             href="http://www.koeri.boun.edu.tr/scripts/lst8.asp"
             target="_blank"
@@ -16,10 +16,11 @@ export const Footer = () => {
           >
             Boğaziçi Üniversitesi Kandilli Rasathanesi ve Deprem Araştırma
             Enstitüsü
-          </a>  
+          </a>
           (KRDAE) tarafından sağlanan verileri kullanmaktadır. Tüm deprem
           verilerinin telif hakları Boğaziçi Üniversitesi Rektörlüğü&apos;ne
-          aittir.<br/>
+          aittir.
+          <br />
           Bu veri bilimsel ve bilgilendirme amaçlı kullanılabilir ancak ticari
           amaçla kullanılamaz.
         </div>
@@ -47,7 +48,7 @@ export const Footer = () => {
             target="_blank"
             className="ml-2 flex h-7 w-40 flex-row items-center space-x-1.5 rounded-sm bg-blue-500 px-2 py-1 text-white shadow-sm transition duration-200 ease-in-out hover:opacity-90 dark:bg-blue-600"
           >
-            <Coffee  className="h-5 w-5"/>
+            <Coffee className="h-5 w-5" />
             <span className="text-shadow text-xs">Bana bir çay ısmarla</span>
           </Link>
         </div>
