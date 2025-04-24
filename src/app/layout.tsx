@@ -1,15 +1,20 @@
 import type { Metadata } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Inter, Poppins } from 'next/font/google';
 import '@/styles/globals.css';
+import { Header } from '@/components/header/header';
+import Providers from '@/providers/providers';
+import { Footer } from '@/components/footer/footer';
 
-const geistSans = Geist({
-	variable: '--font-geist-sans',
-	subsets: ['latin'],
+const inter = Inter({
+	subsets: ['latin', 'latin-ext'],
+	display: 'swap',
+	variable: '--font-inter',
 });
 
-const geistMono = Geist_Mono({
-	variable: '--font-geist-mono',
-	subsets: ['latin'],
+const poppins = Poppins({
+	weight: ['400', '500', '600', '700'],
+	variable: '--font-poppins',
+	subsets: ['latin', 'latin-ext'],
 });
 
 export const metadata: Metadata = {
@@ -23,11 +28,19 @@ export default function RootLayout({
 	children: React.ReactNode;
 }>) {
 	return (
-		<html lang='tr'>
+		<html
+			lang='tr'
+			className='scroll-smooth'
+			suppressHydrationWarning={true}
+		>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} flex flex-col antialiased`}
+				className={`${inter.variable} ${poppins.variable} flex flex-col antialiased`}
 			>
-				{children}
+				<Providers>
+					<Header />
+					<main className='grow'>{children}</main>
+					<Footer />
+				</Providers>
 			</body>
 		</html>
 	);

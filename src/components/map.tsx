@@ -51,7 +51,7 @@ export const MapContent = () => {
 				center={bounds.getCenter()}
 				zoom={10}
 				scrollWheelZoom={true}
-				className='z-10 h-screen w-full'
+				className='h-[calc(100vh)] w-full'
 			>
 				<TileLayer
 					attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
