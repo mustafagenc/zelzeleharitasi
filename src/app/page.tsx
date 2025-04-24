@@ -1,6 +1,7 @@
 'use client';
 
 import dynamic from 'next/dynamic';
+import { useRouter } from 'next/navigation';
 
 const DynamicMap = dynamic(
 	() => import('@/components/map').then((mod) => mod.MapContent),
@@ -10,6 +11,12 @@ const DynamicMap = dynamic(
 );
 
 export default function Page() {
+	const router = useRouter();
+
+	setTimeout(() => {
+		router.refresh();
+	}, 60000);
+
 	return (
 		<div className='relative'>
 			<DynamicMap />
