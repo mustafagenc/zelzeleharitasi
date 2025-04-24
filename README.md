@@ -1,4 +1,4 @@
-# Türkiye Amatör Telsiz Röle Listesi
+# Zelzele Haritası
 
 [![Support Palestine](https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/banner-support.svg)](https://github.com/Safouene1/support-palestine-banner/blob/master/Markdown-pages/Support.md)
 
