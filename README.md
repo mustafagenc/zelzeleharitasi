@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Türkiye Amatör Telsiz Röle Listesi
 
-## Getting Started
+[![Support Palestine](https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/banner-support.svg)](https://github.com/Safouene1/support-palestine-banner/blob/master/Markdown-pages/Support.md)
 
-First, run the development server:
+[![HelpWanted](https://img.shields.io/badge/Help%20Wanted-Contribute-blue)](https://github.com/mustafagenc/zelzeleharitasi/issues?q=is:issue+is:open+label:%22%F0%9F%99%8B%F0%9F%8F%BB%E2%80%8D%E2%99%82%EF%B8%8Fhelp+wanted%22) [![Commit Per Month](https://img.shields.io/github/commit-activity/m/zelzeleharitasi/zelzeleharitasi?)](https://github.com/mustafagenc/zelzeleharitasi/commits/main) [![Last Commit](https://img.shields.io/github/last-commit/mustafagenc/zelzeleharitasi?)](https://github.com/mustafagenc/zelzeleharitasi/commits/main) ![License](https://img.shields.io/github/license/mustafagenc/zelzeleharitasi?label=License) [![Github Star](https://img.shields.io/github/stars/mustafagenc/zelzeleharitasi)](https://github.com/mustafagenc/zelzeleharitasi/stargazers)
+
+[Hata Bildir](https://github.com/mustafagenc/zelzeleharitasi/issues) · [Yeni Özellik Talep Et](https://github.com/mustafagenc/zelzeleharitasi/issues)
+
+## 🪄 Kullandığım Teknolojiler
+
+Bu projede modern ve hızlı bir web deneyimi için şu araçları kullandım:
+
+- [`Next.js`](https://nextjs.org/)
+- [`TypeScript`](https://www.typescriptlang.org/)
+- [`TailwindCSS`](https://tailwindcss.com/)
+- [`Vercel`](https://vercel.com/)
+
+## 🏁 Projeyi bilgisayarında çalıştır
+
+Projeyi kendi bilgisayarınızda çalıştırmak için aşağıdaki adımları izleyin:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+# Projeyi klonla
+git clone https://github.com/mustafagenc/zelzeleharitasi.git
+
+# Proje klasörüne gir
+cd zelzeleharitasi
+
+# Gerekli paketleri yükle
+yarn
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Sonrasında aşağıdaki komutla projeyi geliştirme modunda başlatabilirsin:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+yarn dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Tarayıcında [http://localhost:3000](http://localhost:3000) adresini açarak projeyi görebilirsin.
 
-## Learn More
+## 🎮 Scripts
 
-To learn more about Next.js, take a look at the following resources:
+- `dev`: Uygulamayı `localhost:3000` adresinde başlatır.
+- `build`: Uygulamanın optimize edilmiş üretim (production) derlemesini oluşturur.
+- `start`: Uygulamayı üretim (production) modunda `localhost:3000` adresinde başlatır (önce derlemeyi çalıştırdığınızdan emin olun).
+- `lint`: `/src` dizininde eslint çalıştırır (kodun kurallara uygunluğunu kontrol eder).
+- `prettier`: `/src` dizininde prettier çalıştırır (kodun biçimlendirmesini düzenler).
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 💬 İletişim
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Benimle [mustafagenc.info/contact](https://mustafagenc.info/contact) adresinden iletişime geçebilirsiniz.
