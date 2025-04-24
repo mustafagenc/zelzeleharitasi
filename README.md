@@ -6,6 +6,10 @@
 
 [Hata Bildir](https://github.com/mustafagenc/zelzeleharitasi/issues) · [Yeni Özellik Talep Et](https://github.com/mustafagenc/zelzeleharitasi/issues)
 
+## 💻 Mockup
+
+![Mockup](https://raw.githubusercontent.com/mustafagenc/zelzeleharitasi/refs/heads/main/public/all-devices-white-mockup.png)
+
 ## 🪄 Kullandığım Teknolojiler
 
 Bu projede modern ve hızlı bir web deneyimi için şu araçları kullandım:

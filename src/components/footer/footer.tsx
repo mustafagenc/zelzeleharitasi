@@ -6,20 +6,20 @@ import { PiBowlSteamFill } from "react-icons/pi";
 export const Footer = () => {
   return (
     <>
-      <footer className="z-10 fixed bottom-2 right-2 left-2 lg:bottom-10 lg:right-10 lg:left-10 bg-white flex flex-col lg:flex-row items-center justify-center dark:bg-black p-4 text-shadow-2xs rounded-md select-none">
-        <div className="text-xs text-gray-500 dark:text-gray-400 grow text-center lg:text-left lg:flex hidden">
-          Bu uygulama{" "}
+      <footer className="z-10 fixed bottom-2 right-2 left-2 lg:bottom-10 lg:right-10 lg:left-10 bg-white flex flex-col lg:flex-row dark:bg-black p-4 text-shadow-2xs rounded-md select-none">
+        <div className="text-xs text-gray-500 dark:text-gray-400 grow text-left lg:block hidden">
+          Bu uygulama 
           <a
             href="http://www.koeri.boun.edu.tr/scripts/lst8.asp"
             target="_blank"
-            className="text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-300"
+            className="text-blue-500 hover:text-blue-700 hover:underline dark:text-blue-400 dark:hover:text-blue-300 mx-1"
           >
             Boğaziçi Üniversitesi Kandilli Rasathanesi ve Deprem Araştırma
             Enstitüsü
-          </a>{" "}
+          </a>  
           (KRDAE) tarafından sağlanan verileri kullanmaktadır. Tüm deprem
           verilerinin telif hakları Boğaziçi Üniversitesi Rektörlüğü&apos;ne
-          aittir. <br />
+          aittir.<br/>
           Bu veri bilimsel ve bilgilendirme amaçlı kullanılabilir ancak ticari
           amaçla kullanılamaz.
         </div>
