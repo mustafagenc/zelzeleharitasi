@@ -1,0 +1,10 @@
+{
+  "i18n-ally.localesPaths": ["./messages"],
+  "i18n-ally.keystyle": "nested",
+  "i18n-ally.sourceLanguage": "tr",
+  "editor.minimap.enabled": false,
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": false,
+  "prettier.useEditorConfig": false,
+  "prettier.useTabs": false
+}

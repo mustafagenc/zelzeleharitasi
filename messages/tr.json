@@ -1,0 +1,33 @@
+{
+    "AppName": "Zelzele Haritası",
+    "Metadata": {
+        "Title": "Türkiye'deki En Son Depremler",
+        "Description": "Türkiye'deki son 500 depremi gösteren harita uygulaması"
+    },
+    "Header": {
+        "Title": "Türkiye'deki Son Depremler",
+        "Subtitle": "Türkiye'deki son 500 depremi gösteren harita uygulaması.",
+        "ShortTitle": "Depremler",
+        "ShortSubtitle": "Son 500 deprem."
+    },
+    "Footer": {
+        "Terms": "Bu uygulama <a>Boğaziçi Üniversitesi Kandilli Rasathanesi ve Deprem Araştırma Enstitüsü</a> (KRDAE) tarafından sağlanan verileri kullanmaktadır. Tüm deprem verilerinin telif hakları Boğaziçi Üniversitesi Rektörlüğü&apos;ne aittir.<br></br>Bu veri bilimsel ve bilgilendirme amaçlı kullanılabilir ancak ticari amaçla kullanılamaz.",
+        "ShortTerms": "Boğaziçi Üniversitesi Kandilli Rasathanesi ve Deprem Araştırma Enstitüsü",
+        "LastUpdated": "Son Güncelleme: {lastUpdated, date, ::dd.MM.yyyy kk:mmss}",
+        "BuyMeATea": "Bana bir çay ısmarla"
+    },
+    "Map": {
+        "Magnitude": "Büyüklük: {magnitude}",
+        "Depth": "Derinlik: {depth} km",
+        "Date": "Tarih: {date, date, ::dd.MM.yyyy kk:mmss}",
+        "Coordinates": "Koordinatlar: {latitude}, {longitude}",
+        "Location": "Lokasyon: {location}",
+        "City": "Şehir: {city}"
+    },
+    "Shared": {
+        "Error": "Bir hata oluştu: {error}",
+        "Loading": "Yükleniyor...",
+        "EqLoading": "Deprem verileri yükleniyor...",
+        "NoData": "Deprem verileri bulunamadı..."
+    }
+}

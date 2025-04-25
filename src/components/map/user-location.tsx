@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect, useState } from "react";
 
 function useUserLocation() {
   const [location, setLocation] = useState<[number, number] | null>(null);

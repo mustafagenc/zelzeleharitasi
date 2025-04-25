@@ -1,14 +1,15 @@
 import type { MetadataRoute } from "next";
+import { getTranslations } from "next-intl/server";
 
 export default async function manifest(): Promise<MetadataRoute.Manifest> {
+  const t = await getTranslations();
   return {
-    name: "Deprem Haritası",
-    short_name: "Deprem Haritası",
-    description: "Türkiye'deki son 500 depremi gösteren harita uygulaması.",
+    name: t("AppName"),
+    short_name: t("AppName"),
+    description: t("Metadata.Description"),
     start_url: "/",
     display: "standalone",
     background_color: "#FFFFFF",
-    theme_color: "#7FD0EC",
     orientation: "portrait",
     icons: [
       {

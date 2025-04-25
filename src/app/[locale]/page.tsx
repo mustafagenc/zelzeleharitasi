@@ -21,8 +21,8 @@ export default function Page() {
   }, [router]);
 
   return (
-    <>
+    <div className="relative overflow-hidden h-[calc(100vh-132px)] w-full">
       <DynamicMap />
-    </>
+    </div>
   );
 }

@@ -1,6 +1,7 @@
-import TEarthquake from "@/models/earthquake";
 import { load } from "cheerio";
 import request from "request";
+
+import TEarthquake from "@/models/earthquake";
 
 export async function GET() {
   const earthquakes: TEarthquake[] = [];

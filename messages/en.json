@@ -1,0 +1,33 @@
+{
+    "AppName": "Earthquake Map",
+    "Metadata": {
+        "Title": "Latest Earthquakes in Turkey",
+        "Description": "Map application showing the latest 500 earthquakes in Turkey"
+    },
+    "Header": {
+        "Title": "Latest Earthquakes in Turkey",
+        "Subtitle": "Map application showing the latest 500 earthquakes in Turkey.",
+        "ShortTitle": "Earthquakes",
+        "ShortSubtitle": "Last 500 earthquakes."
+    },
+    "Footer": {
+        "Terms": "This application uses data provided by <a>Boğaziçi University Kandilli Observatory and Earthquake Research Institute</a> (KOERI). All earthquake data is copyrighted by the Rectorate of Boğaziçi University.<br></br>This data can be used for scientific and informational purposes but not for commercial purposes.",
+        "ShortTerms": "Boğaziçi University Kandilli Observatory and Earthquake Research Institute",
+        "LastUpdated": "Last Updated: {lastUpdated, date, ::dd.MM.yyyy kk:mmss}",
+        "BuyMeATea": "Buy me a tea"
+    },
+    "Map": {
+        "Magnitude": "Magnitude: {magnitude}",
+        "Depth": "Depth: {depth} km",
+        "Date": "Date: {date, date, ::yyyyMMMd hh:mmss}",
+        "Coordinates": "Coordinates: {latitude}, {longitude}",
+        "Location": "Location: {location}",
+        "City": "City: {city}"
+    },
+    "Shared": {
+        "Error": "An error occurred: {error}",
+        "Loading": "Loading...",
+        "EqLoading": "Loading earthquake data...",
+        "NoData": "No earthquake data found..."
+    }
+}

@@ -1,9 +1,11 @@
-import { useMapGeographyStore } from "@/lib/mapGeographyStore";
+import { LocateFixed } from "lucide-react";
 import { useSnackbar } from "notistack";
 import { FC } from "react";
 import { useMap } from "react-leaflet";
+
+import { useMapGeographyStore } from "@/lib/mapGeographyStore";
+
 import { Button } from "../ui/button";
-import { LocateFixed } from "lucide-react";
 
 const LocationButton: FC = () => {
   const { location } = useMapGeographyStore();
