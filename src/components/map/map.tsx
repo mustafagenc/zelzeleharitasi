@@ -31,12 +31,16 @@ interface MapContentProps {
 export const MapContent: FC<MapContentProps> = ({ data }) => {
   const [map, setMap] = useState<L.Map | null>(null);
 
-  const { location: userLocation } = useUserLocation();
+  const { location: userLocation, loading } = useUserLocation();
   const { zoom } = useMapGeographyStore();
+
+  if (loading) {
+    return <EqLoading />;
+  }
 
   const mapBoundaries = new LatLngBounds(
     new LatLng(30.0, 25.0),
-    new LatLng(44.0, 45.0)
+    new LatLng(44.0, 45.0),
   );
 
   const additionalBounds = [
@@ -67,8 +71,8 @@ export const MapContent: FC<MapContentProps> = ({ data }) => {
 
   return (
     <div className="flex flex-col lg:flex-row w-full h-[calc(100vh-132px)] lg:border-t-1 lg:border-b-1">
-      <div className="m-h-[calc(100vh-132px)] w-130 hidden overflow-auto lg:flex p-4 border-r-1">
-        <List data={data} map={map} />
+      <div className="h-[calc(100vh-132px)] w-130 hidden overflow-auto lg:flex p-4 border-r-1">
+        {map != null && <List data={data} map={map} />}
       </div>
       <div className="relative overflow-hidden h-full w-full">
         <MapContainer
@@ -78,7 +82,7 @@ export const MapContent: FC<MapContentProps> = ({ data }) => {
           ref={setMap}
           zoomSnap={1}
           zoomDelta={1}
-          className="z-1 h-[calc(100vh-132px)] w-full"
+          className="z-1 h-full w-full"
           preferCanvas={true}
           maxBoundsViscosity={1}
           maxBounds={mapBoundaries}

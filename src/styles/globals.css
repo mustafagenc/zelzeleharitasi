@@ -232,3 +232,27 @@ html {
   background-color: #91d475;
   border: #6ba35a 1px solid;
 }
+
+.gps_ring {
+  border: 3px solid #ff0000;
+  -webkit-border-radius: 30px;
+  height: 21px;
+  width: 21px;
+  -webkit-animation: pulsate 1s ease-out;
+  -webkit-animation-iteration-count: infinite;
+  /*opacity: 0.0*/
+}
+
+@-webkit-keyframes pulsate {
+  0% {
+    -webkit-transform: scale(0.1, 0.1);
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(1.2, 1.2);
+    opacity: 0;
+  }
+}

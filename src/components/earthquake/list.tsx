@@ -2,11 +2,29 @@ import { useFormatter, useNow } from "next-intl";
 import { FC } from "react";
 
 import TEarthquake from "@/models/earthquake";
+import L from "leaflet";
 
 interface ListProps {
   map: L.Map | null;
   data: TEarthquake[];
 }
+
+// const createMarker = (
+//   currentMarker: L.Marker | null,
+//   map: L.Map,
+//   latLng: [number, number]
+// ) => {
+//   if (currentMarker != null && map.hasLayer(currentMarker)) {
+//     map.removeLayer(currentMarker);
+//   }
+
+//   const cssIcon = L.divIcon({
+//     className: "css-icon",
+//     html: '<div class="gps_ring"></div>',
+//   });
+
+//   return L.marker(latLng, { icon: cssIcon }).addTo(map);
+// };
 
 export const List: FC<ListProps> = ({ map, data }) => {
   const format = useFormatter();
@@ -21,8 +39,12 @@ export const List: FC<ListProps> = ({ map, data }) => {
           key={index}
           className="flex items-start gap-2 mb-3 border-b-1 border-gray-50 w-full dark:border-gray-900 dark:hover:bg-gray-950 hover:bg-gray-100 cursor-pointer p-3 rounded-sm"
           onClick={() => {
+            const latLang = [eq.latitude, eq.longitude] as [number, number];
+
             map.closePopup();
-            map.flyTo([eq.latitude, eq.longitude], 14, { animate: true });
+            map.flyTo(latLang, 14, { animate: true });
+
+            // createMarker(map, latLang).addTo(map).bindPopup("Test").openPopup();
           }}
         >
           <div

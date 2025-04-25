@@ -11,7 +11,7 @@ const DynamicMap = dynamic(
   () => import("@/components/map/map").then((mod) => mod.MapContent),
   {
     ssr: false,
-  }
+  },
 );
 
 export default function Page() {
