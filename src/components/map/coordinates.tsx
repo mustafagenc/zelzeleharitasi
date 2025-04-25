@@ -19,7 +19,7 @@ const DisplayCoordinates: FC<DisplayCoordinatesProps> = ({ map }) => {
   }, [map, onMove]);
 
   return (
-    <div className="absolute top-4 right-4 z-400 hidden lg:flex flex-col bg-white/80 dark:bg-black/80 p-2 text-sm font-semibold rounded-sm text-black dark:text-gray-200">
+    <div className="absolute top-4 right-4 z-400 flex flex-col bg-white/80 dark:bg-black/80 p-2 text-sm font-semibold rounded-sm text-black dark:text-gray-200">
       {position.lat.toFixed(6)}, {position.lng.toFixed(6)}
     </div>
   );

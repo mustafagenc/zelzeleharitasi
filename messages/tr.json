@@ -11,7 +11,7 @@
         "ShortSubtitle": "Son 500 deprem."
     },
     "Footer": {
-        "Terms": "Bu uygulama <a>Boğaziçi Üniversitesi Kandilli Rasathanesi ve Deprem Araştırma Enstitüsü</a> (KRDAE) tarafından sağlanan verileri kullanmaktadır. Tüm deprem verilerinin telif hakları Boğaziçi Üniversitesi Rektörlüğü&apos;ne aittir.<br></br>Bu veri bilimsel ve bilgilendirme amaçlı kullanılabilir ancak ticari amaçla kullanılamaz.",
+        "Terms": "Bu uygulama <a>Boğaziçi Üniversitesi Kandilli Rasathanesi ve Deprem Araştırma Enstitüsü</a> (KRDAE) tarafından sağlanan verileri kullanmaktadır. Tüm deprem verilerinin telif hakları Boğaziçi Üniversitesi Rektörlüğü'ne aittir.<br></br>Bu veri bilimsel ve bilgilendirme amaçlı kullanılabilir ancak ticari amaçla kullanılamaz.",
         "ShortTerms": "Boğaziçi Üniversitesi Kandilli Rasathanesi ve Deprem Araştırma Enstitüsü",
         "LastUpdated": "Son Güncelleme: {lastUpdated, date, ::dd.MM.yyyy kk:mmss}",
         "BuyMeATea": "Bana bir çay ısmarla"
