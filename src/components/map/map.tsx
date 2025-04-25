@@ -6,13 +6,7 @@ import "leaflet.markercluster/dist/MarkerCluster.css";
 
 import L, { LatLng, LatLngBounds, LatLngTuple } from "leaflet";
 import { FC, useState } from "react";
-import {
-  MapContainer,
-  Marker,
-  ScaleControl,
-  TileLayer,
-  ZoomControl,
-} from "react-leaflet";
+import { MapContainer, Marker, ScaleControl, TileLayer } from "react-leaflet";
 
 import { useMapGeographyStore } from "@/lib/mapGeographyStore";
 import { useMapEvents } from "@/lib/useMapEvents";
@@ -23,6 +17,7 @@ import DisplayCoordinates from "./coordinates";
 import useUserLocation from "./user-location";
 import { List } from "../earthquake/list";
 import PopUpContent from "./popup-content";
+import EqLoading from "./eq-loading";
 
 const MapEvents = () => {
   useMapEvents();
@@ -88,9 +83,9 @@ export const MapContent: FC<MapContentProps> = ({ data }) => {
           maxBoundsViscosity={1}
           maxBounds={mapBoundaries}
           maxZoom={18}
+          placeholder={<EqLoading />}
         >
           <MapEvents />
-          <ZoomControl position="topleft" />
           <TileLayer url={baseMapUrl} />
           <ScaleControl metric={true} position="bottomleft" imperial={false} />
           {userLocation && (
