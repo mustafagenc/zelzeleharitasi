@@ -5,14 +5,13 @@ import "leaflet.markercluster";
 import "leaflet.markercluster/dist/MarkerCluster.css";
 
 import L, { LatLng, LatLngBounds, LatLngTuple } from "leaflet";
-import { useTranslations } from "next-intl";
 import { FC, useState } from "react";
 import {
   MapContainer,
   Marker,
-  Popup,
   ScaleControl,
   TileLayer,
+  ZoomControl,
 } from "react-leaflet";
 
 import { useMapGeographyStore } from "@/lib/mapGeographyStore";
@@ -22,6 +21,8 @@ import TEarthquake from "@/models/earthquake";
 
 import DisplayCoordinates from "./coordinates";
 import useUserLocation from "./user-location";
+import { List } from "../earthquake/list";
+import PopUpContent from "./popup-content";
 
 const MapEvents = () => {
   useMapEvents();
@@ -33,8 +34,6 @@ interface MapContentProps {
 }
 
 export const MapContent: FC<MapContentProps> = ({ data }) => {
-  const t = useTranslations("Map");
-
   const [map, setMap] = useState<L.Map | null>(null);
 
   const { location: userLocation } = useUserLocation();
@@ -72,60 +71,50 @@ export const MapContent: FC<MapContentProps> = ({ data }) => {
   //const openStreetMapUrl = `https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png`;
 
   return (
-    <MapContainer
-      center={userLocation || locationCenter}
-      zoom={zoom}
-      minZoom={7}
-      ref={setMap}
-      zoomSnap={1}
-      zoomDelta={1}
-      className="z-1 h-[calc(100vh-132px)] w-full"
-      preferCanvas={true}
-      maxBoundsViscosity={1}
-      maxBounds={mapBoundaries}
-      maxZoom={18}
-    >
-      <MapEvents />
-      <TileLayer url={baseMapUrl} />
-      <ScaleControl metric={true} position="bottomleft" imperial={false} />
-      {userLocation && (
-        <Marker position={userLocation} icon={userLocationIcon} />
-      )}
-      {data.map((item, index) => (
-        <Marker
-          key={index}
-          position={[item.latitude, item.longitude]}
-          icon={L.divIcon({
-            className: "custom-icon",
-            html: `<div class="marker priority-${item.priority}">${item.magnitude}</div>`,
-          })}
-          zIndexOffset={item.zIndexOffset}
+    <div className="flex flex-col lg:flex-row w-full h-[calc(100vh-132px)] lg:border-t-1 lg:border-b-1">
+      <div className="m-h-[calc(100vh-132px)] w-130 hidden overflow-auto lg:flex p-4 border-r-1">
+        <List data={data} map={map} />
+      </div>
+      <div className="relative overflow-hidden h-full w-full">
+        <MapContainer
+          center={userLocation || locationCenter}
+          zoom={zoom}
+          minZoom={7}
+          ref={setMap}
+          zoomSnap={1}
+          zoomDelta={1}
+          className="z-1 h-[calc(100vh-132px)] w-full"
+          preferCanvas={true}
+          maxBoundsViscosity={1}
+          maxBounds={mapBoundaries}
+          maxZoom={18}
         >
-          <Popup>
-            <ul className="list-none text-sm/6">
-              <li>{t("Magnitude", { magnitude: item.magnitude })}</li>
-              <li>{t("Depth", { depth: item.depth })}</li>
-              <li>
-                {t("Date", {
-                  date: new Date(item.date),
-                })}
-              </li>
-              <li>
-                {t("Coordinates", {
-                  latitude: item.latitude,
-                  longitude: item.longitude,
-                })}
-              </li>
-              <li>{t("Location", { location: item.location })}</li>
-              <li>{t("City", { city: item.city })}</li>
-            </ul>
-          </Popup>
-        </Marker>
-      ))}
-      {/* <div className="absolute top-30 right-4 z-400 flex flex-col ">
+          <MapEvents />
+          <ZoomControl position="topleft" />
+          <TileLayer url={baseMapUrl} />
+          <ScaleControl metric={true} position="bottomleft" imperial={false} />
+          {userLocation && (
+            <Marker position={userLocation} icon={userLocationIcon} />
+          )}
+          {data.map((item) => (
+            <Marker
+              key={item.id}
+              position={[item.latitude, item.longitude]}
+              icon={L.divIcon({
+                className: "custom-icon",
+                html: `<div class="marker priority-${item.priority}">${item.magnitude}</div>`,
+              })}
+              zIndexOffset={item.zIndexOffset}
+            >
+              <PopUpContent item={item} />
+            </Marker>
+          ))}
+          {/* <div className="absolute top-30 right-4 z-400 flex flex-col ">
           <LocationButton />
         </div> */}
-      {map ? <DisplayCoordinates map={map} /> : null}
-    </MapContainer>
+          {map ? <DisplayCoordinates map={map} /> : null}
+        </MapContainer>
+      </div>
+    </div>
   );
 };

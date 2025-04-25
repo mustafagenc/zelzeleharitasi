@@ -1,6 +1,5 @@
 "use client";
 
-import { List } from "@/components/earthquake/list";
 import EqDataError from "@/components/map/eq-data-error";
 import EqLoading from "@/components/map/eq-loading";
 import TEarthquake from "@/models/earthquake";
@@ -37,14 +36,5 @@ export default function Page() {
   if (isLoading) return <EqLoading />;
   if (!data) return <EqDataError />;
 
-  return (
-    <div className="flex flex-col lg:flex-row w-full h-[calc(100vh-132px)] lg:border-t-1 lg:border-b-1">
-      <div className="m-h-[calc(100vh-132px)] w-130 hidden overflow-auto lg:flex p-4 border-r-1">
-        <List data={data} />
-      </div>
-      <div className="relative overflow-hidden h-full w-full">
-        <DynamicMap data={data} />
-      </div>
-    </div>
-  );
+  return <DynamicMap data={data} />;
 }
