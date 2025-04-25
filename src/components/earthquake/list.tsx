@@ -19,7 +19,7 @@ export const List: FC<ListProps> = ({ map, data }) => {
       {data.map((eq, index) => (
         <div
           key={index}
-          className="flex items-start gap-2 mb-3 border-b-1 border-gray-50 w-full hover:bg-gray-100 cursor-pointer p-3 rounded-sm"
+          className="flex items-start gap-2 mb-3 border-b-1 border-gray-50 w-full dark:border-gray-900 dark:hover:bg-gray-950 hover:bg-gray-100 cursor-pointer p-3 rounded-sm"
           onClick={() => {
             map.closePopup();
             map.flyTo([eq.latitude, eq.longitude], 14, { animate: true });
