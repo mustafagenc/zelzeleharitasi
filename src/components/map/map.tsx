@@ -6,7 +6,7 @@ import "leaflet.markercluster/dist/MarkerCluster.css";
 
 import L, { LatLng, LatLngBounds, LatLngTuple } from "leaflet";
 import { useTranslations } from "next-intl";
-import { useEffect, useState } from "react";
+import { FC, useState } from "react";
 import {
   MapContainer,
   Marker,
@@ -21,8 +21,6 @@ import { UserLocationMarker } from "@/lib/utils";
 import TEarthquake from "@/models/earthquake";
 
 import DisplayCoordinates from "./coordinates";
-import EqDataError from "./eq-data-error";
-import EqLoading from "./eq-loading";
 import useUserLocation from "./user-location";
 
 const MapEvents = () => {
@@ -30,31 +28,21 @@ const MapEvents = () => {
   return null;
 };
 
-export const MapContent = () => {
+interface MapContentProps {
+  data: TEarthquake[];
+}
+
+export const MapContent: FC<MapContentProps> = ({ data }) => {
   const t = useTranslations("Map");
 
-  const [data, setData] = useState<TEarthquake[] | null>(null);
-  const [isLoading, setLoading] = useState(true);
   const [map, setMap] = useState<L.Map | null>(null);
-
-  useEffect(() => {
-    fetch("/api/eq", { next: { revalidate: 3600 } }) //cache: 'no-store',
-      .then((res) => res.json())
-      .then((data) => {
-        setData(data);
-        setLoading(false);
-      });
-  }, []);
 
   const { location: userLocation } = useUserLocation();
   const { zoom } = useMapGeographyStore();
 
-  if (isLoading) return <EqLoading />;
-  if (!data) return <EqDataError />;
-
   const mapBoundaries = new LatLngBounds(
     new LatLng(30.0, 25.0),
-    new LatLng(44.0, 45.0),
+    new LatLng(44.0, 45.0)
   );
 
   const additionalBounds = [
@@ -109,7 +97,7 @@ export const MapContent = () => {
           position={[item.latitude, item.longitude]}
           icon={L.divIcon({
             className: "custom-icon",
-            html: `<div class="marker marker-${item.priority}">${item.magnitude}</div>`,
+            html: `<div class="marker priority-${item.priority}">${item.magnitude}</div>`,
           })}
           zIndexOffset={item.zIndexOffset}
         >

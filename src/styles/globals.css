@@ -185,39 +185,50 @@ html {
   align-items: center;
   justify-content: center;
 
-  &.marker-critical {
-    background-color: #ff4d4d;
-    border: #cc3737 2px solid;
-    color: #fff;
-
+  &.priority-critical {
     width: 32px;
     height: 32px;
     font-size: 12px !important;
   }
 
-  &.marker-high {
-    background-color: #ffa34d;
-    border: #cc7a37 2px solid;
+  &.priority-high {
     width: 28px;
     height: 28px;
     font-size: 11px !important;
   }
 
-  &.marker-normal {
-    background-color: #ffd666;
-    border: #ccaa4d 2px solid;
+  &.priority-normal {
     width: 24px;
     height: 24px;
     font-size: 10px !important;
     opacity: 0.6;
   }
 
-  &.marker-low {
-    background-color: #91d475;
-    border: #6ba35a 2px solid;
+  &.priority-low {
     width: 20px;
     height: 20px;
     font-size: 9px !important;
     opacity: 0.5;
   }
+}
+
+.priority-critical {
+  background-color: #ff4d4d;
+  border: #cc3737 1px solid;
+  color: #fff;
+}
+
+.priority-high {
+  background-color: #ffa34d;
+  border: #cc7a37 1px solid;
+}
+
+.priority-normal {
+  background-color: #ffd666;
+  border: #ccaa4d 1px solid;
+}
+
+.priority-low {
+  background-color: #91d475;
+  border: #6ba35a 1px solid;
 }

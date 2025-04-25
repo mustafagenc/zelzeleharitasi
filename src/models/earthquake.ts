@@ -1,4 +1,5 @@
 export default class TEarthquake {
+  id: string = crypto.randomUUID();
   date: Date;
   latitude: number;
   longitude: number;
@@ -28,7 +29,7 @@ export default class TEarthquake {
     depth: number,
     magnitude: number,
     location: string,
-    city: string,
+    city: string
   ) {
     this.date = date;
     this.latitude = latitude;
