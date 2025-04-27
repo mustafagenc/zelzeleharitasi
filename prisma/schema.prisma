@@ -18,4 +18,5 @@ model Earthquakes {
   city String?
   priority String
   zIndexOffset Int
+  createdAt DateTime @default(now())
 }
