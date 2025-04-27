@@ -4,7 +4,7 @@ export async function GET() {
     try {
         const earthquakes = await prisma.earthquakes.findMany({
             orderBy: {
-                id: 'desc',
+                date: 'desc',
             },
         });
         return Response.json(earthquakes);
