@@ -1,11 +1,11 @@
-import TEarthquake from "@/models/earthquake";
+import { Earthquakes } from "@prisma/client";
 import { useTranslations } from "next-intl";
 import { FC } from "react";
 
 import { Popup } from "react-leaflet";
 
 interface PopUpContentProps {
-  item: TEarthquake;
+  item: Earthquakes;
 }
 
 const PopUpContent: FC<PopUpContentProps> = ({ item }) => {
@@ -26,8 +26,8 @@ const PopUpContent: FC<PopUpContentProps> = ({ item }) => {
             longitude: item.longitude,
           })}
         </li>
-        <li>{t("Location", { location: item.location })}</li>
-        <li>{t("City", { city: item.city })}</li>
+        <li>{t("Location", { location: item.location ?? "" })}</li>
+        <li>{t("City", { city: item.city ?? "" })}</li>
       </ul>
     </Popup>
   );

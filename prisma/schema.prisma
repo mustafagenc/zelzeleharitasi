@@ -1,0 +1,21 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Earthquakes {
+  id    Int     @id @default(autoincrement())
+  date  DateTime
+  latitude Float
+  longitude Float
+  depth Float
+  magnitude Float
+  location String?
+  city String?
+  priority String
+  zIndexOffset Int
+}

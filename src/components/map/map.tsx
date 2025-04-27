@@ -11,13 +11,13 @@ import { MapContainer, Marker, ScaleControl, TileLayer } from 'react-leaflet';
 import { useMapGeographyStore } from '@/lib/mapGeographyStore';
 import { useMapEvents } from '@/lib/useMapEvents';
 import { UserLocationMarker } from '@/lib/utils';
-import TEarthquake from '@/models/earthquake';
 
 import DisplayCoordinates from './coordinates';
 import useUserLocation from './user-location';
 import { List } from '../earthquake/list';
 import PopUpContent from './popup-content';
 import EqLoading from './eq-loading';
+import { Earthquakes } from '@prisma/client';
 
 const MapEvents = () => {
     useMapEvents();
@@ -25,7 +25,7 @@ const MapEvents = () => {
 };
 
 interface MapContentProps {
-    data: TEarthquake[];
+    data: Earthquakes[];
 }
 
 export const MapContent: FC<MapContentProps> = ({ data }) => {

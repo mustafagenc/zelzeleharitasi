@@ -1,0 +1,9 @@
+{
+    "buildCommand": "prisma generate && next build",
+    "crons": [
+        {
+            "path": "/api/earthquakes",
+            "schedule": "0 1 * * *"
+        }
+    ]
+}
