@@ -13,7 +13,7 @@
   ],
   "scripts": {
     "dev": "next dev --turbopack",
-    "postinstall": "prisma generate --no-enginee",
+    "postinstall": "prisma generate --no-engine",
     "build": "next build",
     "vercel-build": "npx prisma generate --no-engine && next build",
     "start": "next start",
