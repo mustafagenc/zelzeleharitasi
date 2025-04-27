@@ -2,7 +2,7 @@
   "name": "zelzeleharitasi",
   "description": "Türkiye'deki son 500 depremi gösteren harita uygulaması.",
   "homepage": "https://zelzeleharitasi.vercel.app",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "contributors": [
     {
@@ -13,9 +13,9 @@
   ],
   "scripts": {
     "dev": "next dev --turbopack",
-    "postinstall": "prisma generate",
+    "postinstall": "prisma generate --no-enginee",
     "build": "next build",
-    "vercel-build": "npx prisma generate && next build",
+    "vercel-build": "npx prisma generate --no-engine && next build",
     "start": "next start",
     "lint": "next lint --no-cache",
     "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
