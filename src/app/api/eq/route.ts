@@ -6,7 +6,7 @@ export async function GET() {
       orderBy: {
         date: "desc",
       },
-      take: 500,
+      take: 3000,
     });
     return Response.json(earthquakes);
   } catch (error) {

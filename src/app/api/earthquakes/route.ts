@@ -39,7 +39,7 @@ export async function GET() {
             createdAt: new Date(),
           },
         });
-      })
+      }),
     );
 
     prisma.$disconnect();

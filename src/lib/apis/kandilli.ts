@@ -41,8 +41,8 @@ export async function GetKandilli(): Promise<TEarthquake[]> {
                   date.getDate(),
                   parseInt(time[0]),
                   parseInt(time[1]),
-                  parseInt(time[2])
-                )
+                  parseInt(time[2]),
+                ),
               );
 
               const latitude = parseFloat(eqInfo[2]);
@@ -59,7 +59,7 @@ export async function GetKandilli(): Promise<TEarthquake[]> {
                 depth,
                 magnitude,
                 location,
-                city
+                city,
               );
 
               if (magnitude >= 2 && magnitude < 4) {
@@ -82,7 +82,7 @@ export async function GetKandilli(): Promise<TEarthquake[]> {
         } else {
           reject(new Error(`Status code: ${response.statusCode}`));
         }
-      }
+      },
     );
   });
 
