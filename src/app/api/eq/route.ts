@@ -1,15 +1,16 @@
-import { prisma } from '@/lib/client';
+import { prisma } from "@/lib/client";
 
 export async function GET() {
-    try {
-        const earthquakes = await prisma.earthquakes.findMany({
-            orderBy: {
-                date: 'desc',
-            },
-        });
-        return Response.json(earthquakes);
-    } catch (error) {
-        console.error(error);
-        return Response.json({ success: false, error: error }, { status: 500 });
-    }
+  try {
+    const earthquakes = await prisma.earthquakes.findMany({
+      orderBy: {
+        date: "desc",
+      },
+      take: 500,
+    });
+    return Response.json(earthquakes);
+  } catch (error) {
+    console.error(error);
+    return Response.json({ success: false, error: error }, { status: 500 });
+  }
 }
