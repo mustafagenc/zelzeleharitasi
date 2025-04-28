@@ -21,9 +21,6 @@ export const List: FC<ListProps> = ({ map, data }) => {
         .map((item) => {
           return { ...item, date: new Date(item.date) };
         })
-        .sort((a, b) => {
-          return b.id - a.id;
-        })
         .map((eq, index) => (
           <div
             key={index}

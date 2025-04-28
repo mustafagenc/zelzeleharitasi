@@ -31,7 +31,20 @@ export async function GetKandilli(): Promise<TEarthquake[]> {
             }
 
             if (eqInfo[1]) {
-              const completeDate = new Date(`${eqInfo[0]} ${eqInfo[1]}`);
+              const date = new Date(eqInfo[0]);
+              const time = eqInfo[1].split(":");
+
+              const completeDate = new Date(
+                Date.UTC(
+                  date.getFullYear(),
+                  date.getMonth(),
+                  date.getDate(),
+                  parseInt(time[0]),
+                  parseInt(time[1]),
+                  parseInt(time[2])
+                )
+              );
+
               const latitude = parseFloat(eqInfo[2]);
               const longitude = parseFloat(eqInfo[3]);
               const depth = parseFloat(eqInfo[4]);
