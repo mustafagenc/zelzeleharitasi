@@ -9,7 +9,7 @@ datasource db {
 
 model Earthquakes {
   id    Int     @id @default(autoincrement())
-  date  DateTime
+  date  DateTime 
   latitude Float
   longitude Float
   depth Float
@@ -19,4 +19,6 @@ model Earthquakes {
   priority String
   zIndexOffset Int
   createdAt DateTime @default(now())
+
+  @@index([date(sort: Desc), latitude, longitude, depth, magnitude, location, city])
 }

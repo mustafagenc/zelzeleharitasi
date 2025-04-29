@@ -1,10 +1,10 @@
 import { load } from "cheerio";
 import request from "request";
 
-import TEarthquake from "@/models/earthquake";
+import { Earthquakes } from "@prisma/client";
 
-export async function GetKandilli(): Promise<TEarthquake[]> {
-  const earthquakes: TEarthquake[] = [];
+export async function GetKandilli(): Promise<Earthquakes[]> {
+  const earthquakes: Earthquakes[] = [];
 
   await new Promise((resolve, reject) => {
     request(
@@ -41,8 +41,8 @@ export async function GetKandilli(): Promise<TEarthquake[]> {
                   date.getDate(),
                   parseInt(time[0]),
                   parseInt(time[1]),
-                  parseInt(time[2]),
-                ),
+                  parseInt(time[2])
+                )
               );
 
               const latitude = parseFloat(eqInfo[2]);
@@ -52,15 +52,19 @@ export async function GetKandilli(): Promise<TEarthquake[]> {
               const location = eqInfo[8];
               const city = eqInfo[9];
 
-              const earthquake = new TEarthquake(
-                completeDate,
-                latitude,
-                longitude,
-                depth,
-                magnitude,
-                location,
-                city,
-              );
+              const earthquake: Earthquakes = {
+                id: 0, // Default value for id
+                date: completeDate,
+                latitude: latitude,
+                longitude: longitude,
+                depth: depth,
+                magnitude: magnitude,
+                location: location,
+                city: city,
+                priority: "normal",
+                zIndexOffset: 10,
+                createdAt: new Date(), // Default value for createdAt
+              };
 
               if (magnitude >= 2 && magnitude < 4) {
                 earthquake.priority = "normal";
@@ -82,7 +86,7 @@ export async function GetKandilli(): Promise<TEarthquake[]> {
         } else {
           reject(new Error(`Status code: ${response.statusCode}`));
         }
-      },
+      }
     );
   });
 

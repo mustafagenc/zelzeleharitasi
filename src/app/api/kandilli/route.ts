@@ -1,8 +1,8 @@
 import { GetKandilli } from "@/lib/apis/kandilli";
-import TEarthquake from "@/models/earthquake";
+import { Earthquakes } from "@prisma/client";
 
 export async function GET() {
-  const earthquakes: TEarthquake[] = await GetKandilli();
+  const earthquakes: Earthquakes[] = await GetKandilli();
   return new Response(JSON.stringify(earthquakes), {
     status: 200,
     headers: { "Content-Type": "application/json" },
