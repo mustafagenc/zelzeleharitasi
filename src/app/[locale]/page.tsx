@@ -25,7 +25,7 @@ export default function Page() {
       router.refresh();
     }, 60000);
 
-    fetch("/api/kandilli", { cache: "no-store", next: { revalidate: 3600 } })
+    fetch("/api/eq", { cache: "no-store", next: { revalidate: 3600 } })
       .then((res) => res.json())
       .then((data) => {
         setData(data);

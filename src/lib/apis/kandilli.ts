@@ -1,10 +1,10 @@
 import { load } from "cheerio";
 import request from "request";
 
-import { Earthquakes } from "@prisma/client";
+import TEarthquake from "@/models/earthquake";
 
-export async function GetKandilli(): Promise<Earthquakes[]> {
-  const earthquakes: Earthquakes[] = [];
+export async function GetKandilli(): Promise<TEarthquake[]> {
+  const earthquakes: TEarthquake[] = [];
 
   await new Promise((resolve, reject) => {
     request(
@@ -52,19 +52,15 @@ export async function GetKandilli(): Promise<Earthquakes[]> {
               const location = eqInfo[8];
               const city = eqInfo[9];
 
-              const earthquake: Earthquakes = {
-                id: 0, // Default value for id
-                date: completeDate,
-                latitude: latitude,
-                longitude: longitude,
-                depth: depth,
-                magnitude: magnitude,
-                location: location,
-                city: city,
-                priority: "normal",
-                zIndexOffset: 10,
-                createdAt: new Date(), // Default value for createdAt
-              };
+              const earthquake = new TEarthquake(
+                completeDate,
+                latitude,
+                longitude,
+                depth,
+                magnitude,
+                location,
+                city
+              );
 
               if (magnitude >= 2 && magnitude < 4) {
                 earthquake.priority = "normal";
