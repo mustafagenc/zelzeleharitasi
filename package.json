@@ -13,12 +13,11 @@
   ],
   "scripts": {
     "dev": "next dev --turbopack",
-    "postinstall": "prisma generate",
+    "postinstall": "prisma generate --no-engine",
     "build": "next build",
-    "vercel-build": "npx prisma generate && next build",
+    "vercel-build": "npx prisma generate --no-engine && next build",
     "start": "next start",
-    "lint": "next lint --no-cache",
-    "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+    "lint": "next lint --no-cache"
   },
   "dependencies": {
     "@next/third-parties": "^15.3.1",
@@ -67,8 +66,6 @@
     "@types/rtl-detect": "^1.0.3",
     "eslint": "^9",
     "eslint-config-next": "15.3.1",
-    "prettier": "^3.5.3",
-    "prettier-plugin-tailwindcss": "^0.6.11",
     "prisma": "^6.7.0",
     "tailwindcss": "^4",
     "typescript": "^5"

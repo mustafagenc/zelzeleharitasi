@@ -17,19 +17,18 @@
     "wix.vscode-import-cost",
     "oderwat.indent-rainbow",
     "kisstkondoros.vscode-gutter-preview",
-    "ms-vscode.vscode-typescript-next",
     "yzhang.markdown-all-in-one",
     "stringham.move-ts",
     "imgildev.vscode-next-pack",
     "pulkitgangwar.nextjs-snippets",
     "christian-kohler.npm-intellisense",
-    "esbenp.prettier-vscode",
     "yoavbls.pretty-ts-errors",
     "willluke.nextjs",
     "gruntfuggly.todo-tree",
     "mike-co.import-sorter",
     "pmneo.tsimporter",
     "frenco.vscode-vercel",
-    "redhat.vscode-yaml"
+    "redhat.vscode-yaml",
+    "biomejs.biome"
   ]
 }
