@@ -2,7 +2,7 @@
 
 Bu proje, Kandilli Rasathanesi'nden alınan güncel deprem verilerini kullanarak Türkiye'deki son depremleri canlı bir harita üzerinde görselleştiren bir web uygulamasıdır.
 
-[![Support Palestine](https://raw.githubusercontent.com/Safouene1/support-palestine-banner/master/banner-support.svg)](https://github.com/Safouene1/support-palestine-banner/blob/master/Markdown-pages/Support.md)
+[![Support Palestine](https://raw.githubusercontent.com/mustafagenc/palestine/refs/heads/main/banners/b-2.svg)](https://github.com/mustafagenc/palestine/blob/main/Support.md)
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/39bfd258-066b-4637-bc95-557b7490090f/deploy-status)](https://app.netlify.com/sites/zelzeleharitasi/deploys) [![CodeFactor](https://www.codefactor.io/repository/github/mustafagenc/zelzeleharitasi/badge)](https://www.codefactor.io/repository/github/mustafagenc/zelzeleharitasi) [![HelpWanted](https://img.shields.io/badge/Help%20Wanted-Contribute-blue)](https://github.com/mustafagenc/zelzeleharitasi/issues?q=is:issue+is:open+label:%22%F0%9F%99%8B%F0%9F%8F%BB%E2%80%8D%E2%99%82%EF%B8%8Fhelp+wanted%22) [![Commit Per Month](https://img.shields.io/github/commit-activity/m/mustafagenc/zelzeleharitasi?)](https://github.com/mustafagenc/zelzeleharitasi/commits/main) [![Last Commit](https://img.shields.io/github/last-commit/mustafagenc/zelzeleharitasi?)](https://github.com/mustafagenc/zelzeleharitasi/commits/main) ![License](https://img.shields.io/github/license/mustafagenc/zelzeleharitasi?label=License) [![Github Star](https://img.shields.io/github/stars/mustafagenc/zelzeleharitasi)](https://github.com/mustafagenc/zelzeleharitasi/stargazers)
 
