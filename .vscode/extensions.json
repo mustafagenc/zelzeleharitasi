@@ -28,7 +28,6 @@
     "mike-co.import-sorter",
     "pmneo.tsimporter",
     "frenco.vscode-vercel",
-    "redhat.vscode-yaml",
-    "biomejs.biome"
+    "redhat.vscode-yaml"
   ]
 }
